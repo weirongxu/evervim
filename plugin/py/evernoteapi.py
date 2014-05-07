@@ -4,6 +4,10 @@
 # License: MIT
 #### import
 # {{{
+try:
+    import vim
+except ImportError:
+    pass
 import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), 'lib/'))
@@ -219,7 +223,10 @@ CONSUMER_KEY = 'kakkyz2'
 CONSUMER_SECRET = '960305afca85b6b0'
 
 #EVERNOTE_HOST = "sandbox.evernote.com"
-EVERNOTE_HOST = "www.evernote.com"
+try:
+    EVERNOTE_HOST = vim.eval('g:evervim_host')
+except Exception:
+    EVERNOTE_HOST = 'www.evernote.com'
 USERSTORE_URI = "https://" + EVERNOTE_HOST + "/edam/user"
 CONSUMER_SECRET = '960305afca85b6b0'
 

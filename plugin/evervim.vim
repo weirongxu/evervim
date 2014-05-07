@@ -25,6 +25,10 @@ if !exists('g:evervim_devtoken')
     let g:evervim_devtoken = ''
 endif
 
+if !exists('g:evervim_host')
+    let g:evervim_host = 'www.evernote.com'
+endif
+
 if !exists('g:evervim_sortnotebooks') " (name|serviceCreated|serviceUpdated) (asc|desc)
     let g:evervim_sortnotebooks = 'name asc'
 endif

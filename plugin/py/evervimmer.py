@@ -44,6 +44,7 @@ class Evervimmer(object):
     """ prefs from vim option """
     def setPref(self):  # {{{
         self.pref.workdir              = vim.eval("g:evervim_workdir")
+        self.pref.host                 = vim.eval("g:evervim_host")
         self.pref.devtoken             = vim.eval("g:evervim_devtoken")
         self.pref.sortnotebooks        = vim.eval("g:evervim_sortnotebooks")
         self.pref.sorttags             = vim.eval("g:evervim_sorttags")
@@ -289,7 +290,7 @@ class Evervimmer(object):
 # ----- private methods
 
     def __openBrowser(self, guid):  # {{{
-        uri = "https://www.evernote.com/view/" + guid
+        uri = "https://" + self.pref.host + "/view/" + guid
         vim.command(":OpenBrowser " + uri)
     #}}}
 
