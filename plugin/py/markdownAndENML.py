@@ -149,6 +149,8 @@ def parseENML(node, level=0, result='', option=parserOption()):  # {{{
             option.blockquote -= 1
             if level == 0:
                 result += "\n"
+        elif tag == "hr":
+            result += "-----"
         elif tag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
             headerlv = tag[1:]
             result += ("#" * int(headerlv)) + " " + "".join([parseENML(child, level + 1, "", option) for child in node.childNodes])
