@@ -1,7 +1,7 @@
 # らき☆すた
 
-[{<img alt="hope-echoes" src="http://www.google.co.jp/images/nav_logo101.png"/>
-泉こなた}]({http://www.google.com})
+[<img alt="hope-echoes" src="http://www.google.co.jp/images/nav_logo101.png"/>
+泉こなた](http://www.google.com)
 
 Paragraph1  
 Paragraph2

@@ -69,7 +69,7 @@ def parseENML(node, level=0, result='', option=parserOption()):  # {{{
             htmltext = "".join([parseENML(child, level + 1, "", option) for child in node.childNodes])
             option.a = False
 #           result += '[{0}]({1})'.format(htmltext, htmlhref) # this code does not work multibyte!
-            result += '[{' + htmltext + '}]({' + htmlhref + '})'
+            result += '[' + htmltext + '](' + htmlhref + ')'
         elif tag == "pre":
             option.pre = True
             result += "".join([parseENML(child, level + 1, result, option) for child in node.childNodes])
