@@ -6,6 +6,9 @@
 Paragraph1  
 Paragraph2
 
+Paragraph1  
+Paragraph2
+
 <en-media hash="xxxxx" style="cursor: default; vertical-align: middle;" type="image/jpeg"/>
 
 * リスト１ _it_ **bd** tail
