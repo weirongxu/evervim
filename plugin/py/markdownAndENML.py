@@ -92,7 +92,7 @@ def parseENML(node, level=0, result='', option=parserOption()):  # {{{
         elif tag == "p":
             option.p = True
             result += "".join([parseENML(child, level + 1, "", option) for child in node.childNodes])
-            result = re.compile(r'<br/?>').sub('  ', result)
+            result = re.compile(r'<br.*?/?>').sub('  ', result)
             result += '\n'
             option.p = False
         elif tag == "ul":
